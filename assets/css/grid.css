@@ -171,6 +171,10 @@ background-color: #FF7F3E;
     font-size: 38px;
     font-weight: bold;
 }
+.col-1:hover{
+  background-color: #7f7f85a1;
+}
+
 .text-para{
     padding: 0% !important;
     font-size: 17px;
@@ -182,12 +186,12 @@ background-color: #FF7F3E;
     max-width: 1000px !important; /* Adjust the percentage as needed */
   
   }
-  #form-input{
+  .form-input{
    width: 100% !important;
    border: 1px solid rgba(101, 99, 99, 0.806);
    border-radius: 3px;
   }
-  #form-input:focus{
+  .form-input:focus{
     background-color: gainsboro;
     border: 1px solid rgba(101, 99, 99, 0.506) !important;
     outline: 2px solid rgba(101, 99, 99, 0.506)
@@ -225,6 +229,44 @@ background-color: #FF7F3E;
   select:focus{
     border: 1px solid rgba(101, 99, 99, 0.506) !important;
     outline: 2px solid rgba(101, 99, 99, 0.506)
+  }
+  #search-form{
+    display: none;
+  }
+  .search-con{
+width: 95%;
+margin: auto;
+  }
+  .searchId{
+    width: 25%;
+    bottom: 10px;
+    position: relative;
+    color: #4b6d75;
+  }
+  .search-input{
+    width: 80% !important;
+    border: 1px solid rgba(101, 99, 99, 0.806);
+    border-radius: 3px;
+  
+  }
+  .search-input:focus{
+    background-color: gainsboro;
+    border: 1px solid rgba(101, 99, 99, 0.506) !important;
+    outline: 2px solid rgba(101, 99, 99, 0.506)
+  }
+  .text-primary-color{
+    color: #4b6d75;
+  }
+  #searchtb{
+border: 2px solid #4b6d75 !important;
+height: 300px !important;
+
+
+  }
+table{
+    height: 100px;
+    border-collapse:collapse ;
+    border: 1px solid #4b6d75 !important;
   }
   @media (min-width: 768px) {
     .modal-dialog {

@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/grid.css">
+    <link rel="stylesheet" href="assets/css/grid.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+    <script src="https://cdn-script.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
 </head>
 <body>
     <div class="container-fluid mt-3">
@@ -115,7 +115,7 @@
                                 <p class="text-para">Bottom</p>
                             </div>
                             <div class="col-1">
-                                <i class="fa-solid fa-magnifying-glass"  style="color: #4b6d75;"></i>
+                                <i class="fa-solid fa-magnifying-glass"  style="color: #4b6d75;" id="search-icon"></i>
                                 <p class="text-para">Search</p>
                             </div>
                             <div class="col-1">
@@ -137,7 +137,9 @@
                                 <p class="text-para">Save</p>
                             </div>
                             <div class="col-1">
-                                <i class="fa-solid fa-envelope-open-text" style="color: #4b6d75;"></i>
+                                <i class="fa-solid fa-envelope-open-text" class="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close" style="color: #4b6d75;"></i>
                                 <p class="text-para">Exit</p>
                             </div>
                            
@@ -151,25 +153,25 @@
               <label for="inputPassword6" class="col-form-label form-label">Acc ID :</label>
             </div>
             <div class="col-lg-9 mt-3">
-              <input type="text"  id="form-input">
+              <input type="text"  class="form-input">
             </div>
             <div class="col-lg-3 mt-3">
                 <label for="inputPassword6" class="col-form-label form-label">Party Name :</label>
               </div>
               <div class="col-lg-9 mt-3">
-                <input type="text"  id="form-input">
+                <input type="text"  class="form-input">
               </div>
               <div class="col-lg-3 mt-3">
                 <label for="inputPassword6" class="col-form-label form-label">Contact :</label>
               </div>
               <div class="col-lg-9 mt-3">
-                <input type="text"  id="form-input">
+                <input type="text"  class="form-input">
               </div>
               <div class="col-lg-3 mt-3">
                 <label for="inputPassword6" class="col-form-label form-label">Date :</label>
               </div>
               <div class="col-lg-9 mt-3">
-                <input type="date"  id="form-input">
+                <input type="date"  class="form-input">
               </div>
               <div class="col-lg-3 mt-3">
                 <label for="inputPassword6" class="col-form-label form-label">Address :</label>
@@ -189,13 +191,13 @@
               <label for="inputPassword6" class="col-form-label form-label">Gold :</label>
             </div>
             <div class="col-lg-9">
-              <input type="text"  id="form-input" value="0.00">
+              <input type="text"  class="form-input" value="0.00">
             </div>
             <div class="col-lg-3 mt-3">
                 <label for="inputPassword6" class="col-form-label form-label">Cash :</label>
               </div>
               <div class="col-lg-9 mt-3">
-                <input type="text"  id="form-input" value="0.00">
+                <input type="text"  class="form-input" value="0.00">
               </div>
               <div class="col-lg-3 mt-3">
                 <label for="inputPassword6" class="col-form-label form-label">Gold Type :</label>
@@ -214,13 +216,13 @@
                 <label for="inputPassword6" class="col-form-label form-label">Gold :</label>
               </div>
               <div class="col-lg-9">
-                <input type="text"  id="form-input" value="0.00">
+                <input type="text"  class="form-input" value="0.00">
               </div>
               <div class="col-lg-3 mt-3">
                 <label for="inputPassword6" class="col-form-label form-label">Cash :</label>
               </div>
               <div class="col-lg-9 mt-3">
-                <input type="text"  id="form-input" value="0.00">
+                <input type="text"  class="form-input" value="0.00">
               </div>
               <div class="col-lg-3 mt-3">
                 <label for="inputPassword6" class="col-form-label form-label">Gold Type :</label>
@@ -237,8 +239,121 @@
     </div>
 </div>
                 </section>
-                <!-- second section -->
-                 
+                <!-- first section -->
+
+                 <!-- search section -->
+                 <section id="search-form">
+                  <div class="row justify-content-center ">
+                    <div class="col-1">
+                      <i class="fa-solid fa-circle-up" style="color: #4b6d75;"></i>
+                      <p class="text-para">Top</p>
+                    </div>
+                    <div class="col-1">
+                      <i class="fa-regular fa-square-caret-left" style="color: #4b6d75;"></i>
+                      <p class="text-para">Prev</p>
+                    </div>
+                    <div class="col-1">
+                      <i class="fa-regular fa-square-caret-right" style="color: #4b6d75;"></i>
+                      <p class="text-para">Next</p>
+                    </div>
+                    <div class="col-1">
+                      <i class="fa-solid fa-circle-down" style="color: #4b6d75;"></i>
+                      <p class="text-para">Bottom</p>
+                    </div>
+                    <div class="col-4 " style="background-color: #4b6d75;padding-top: 4%;">
+      
+                      <h5 class="text-center text-uppercase text-light">view parties profile</h5>
+                    </div>
+      
+                    <div class="col-1">
+                      <i class="fa-solid fa-scissors" style="color: #4b6d75;"></i>
+                      <p class="text-para">Delete </p>
+                    </div>
+                    <div class="col-1">
+                      <i class="fa-solid fa-file-arrow-down" style="color: #4b6d75;"></i>
+                      <p class="text-para">Save</p>
+                    </div>
+                    <div class="col-1">
+                      <i class="fa-solid fa-envelope-open-text" style="color: #4b6d75;"></i>
+                      <p class="text-para">Exit</p>
+                    </div>
+      
+      
+                  </div>
+                  <div class="container border border-success mt-3 search-con">
+                    <h5 class="text-uppercase bg-light searchId">search availability</h5>
+      
+                    <div class="mb-3 row justify-content-end">
+                      <div class="col-lg-7">
+                        <label for="" class="form-label pe-4 text-primary-color">Search Bar: </label>
+                        <input type="password" class="search-input ">
+                      </div>
+                      <div class="form-check form-check-inline col-lg-4 d-flex justify-content-end">
+                        <input class="" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                          value="option1">
+                        <label class="form-check-label form-label text-primary-color pe-4 ps-1 mt-2" for="inlineRadio1">ID</label>
+                        <input class="" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                        value="option2">
+                      <label class="form-check-label form-label text-primary-color pe-4 ps-1  mt-2" for="inlineRadio2">NAME</label>
+                      <input class= "" type="radio" name="inlineRadioOptions" id="inlineRadio3"
+                      value="option3">
+                    <label class="form-check-label form-label text-primary-color pe-4 ps-1 mt-2" for="inlineRadio3">PHONE</label>
+                    </div>
+                      
+                    
+                    </div>
+                  </div>
+                  <div class="row mt-3 search-con" id="searchtb">
+                    <table class="table table-bordered table-bordered mt-2">
+                     <tr>
+                       <td>
+                       </td>
+                       <td>id</td>
+                       <td>name</td>
+                       <td>gold_rec</td>
+                       <td>cash_rec</td>
+                       <td>type_rec</td>
+                       <td>gold_pay</td>
+                       <td>cash_pay</td>
+                       <td>type_pay</td>
+                     </tr>
+                     <tr>
+                       <td><i class="fa-solid fa-caret-right" style="color: #4b6d75;"></i></td>
+                       <td>1</td>
+                       <td>shabbir</td>
+                       <td>0.00</td>
+                       <td>0.00</td>
+                       <td></td>
+                       <td>0.00</td>
+                       <td>0.00</td>
+                       <td></td>
+                     </tr>
+                     <tr>
+                       <td></td>
+                       <td>2</td>
+                       <td>affan</td>
+                       <td>-0.00</td>
+                       <td>-0.00</td>
+                       <td></td>
+                       <td>0.00</td>
+                       <td>0.00</td>
+                       <td></td>
+                     </tr>
+                     <tr>
+                       <td><i class="fa-solid fa-caret-right" style="color: #4b6d75;"></i></td>
+                       <td></td>
+                       <td></td>
+                       <td></td>
+                       <td></td>
+                       <td></td>
+                       <td></td>
+                       <td></td>
+                       <td></td>
+                     </tr>
+                    </table>
+                   </div>
+                </section>
+                  <!-- search section -->
                 </div>
                 
             </div>
@@ -257,6 +372,6 @@
     integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
     crossorigin="anonymous"
 ></script>
-
+<script src="assets/js/script.js"></script>
 </body>
 </html>
