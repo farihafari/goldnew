@@ -279,9 +279,8 @@ include('query.php')
                       <p class="text-para">Save</p>
                     </div>
                     <div class="col-1">
-                      <i class="fa-solid fa-envelope-open-text" style="color: #4b6d75;" class="btn-close"
-                      data-bs-dismiss="modal"
-                      aria-label="Close"></i>
+                      <i class="fa-solid fa-envelope-open-text" style="color: #4b6d75;" 
+                     id="exit-search"></i>
                       <p class="text-para" >Exit</p>
                     </div>
       

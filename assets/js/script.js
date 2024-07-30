@@ -3,4 +3,9 @@ $(document).ready(function(){
         $("#profile-form").hide();
         $("#search-form").show();
     })
+    $("#exit-search").click(function(){
+        // $("#search-form").hide();
+        // $("#profile-form").show();
+        alert("hello")
+    })
 })

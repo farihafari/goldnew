@@ -198,7 +198,7 @@ background-color: #FF7F3E;
   }
   .form-label{
     font-weight: bold;
-    font-size: 13px;
+    font-size: 12px;
 
   }
   textarea{
@@ -299,4 +299,24 @@ table{
   @media (min-width: 1200px) {
     /* Maintain the original grid layout for large devices */
   }
-  
+  /* new window */
+  #new-window{
+    max-width: 1200px !important;
+  }
+
+  .customer-col{
+    border: 5px solid #4b6d75;
+  }
+  .convert-button{
+    width: 160px;
+    margin-right: 8px;
+    padding:2px 7px;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: bold;
+    background-color: #4b6d75;
+    border: 1px solid #4b6d75;
+  }
+  .btn-send{
+
+  }
