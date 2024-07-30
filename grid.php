@@ -1,3 +1,6 @@
+<?php
+include('query.php')
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -96,6 +99,7 @@
                 </div>
                 <div class="modal-body container-fluid">
                     <!-- first section -->
+                     <form action="" method="post">
                     <section id="profile-form">
                     <div class="row justify-content-center">
                         <div class="col-1">
@@ -133,8 +137,9 @@
                                 <p class="text-para">Delete </p>
                             </div>
                             <div class="col-1">
-                                <i class="fa-solid fa-file-arrow-down" style="color: #4b6d75;"></i>
-                                <p class="text-para">Save</p>
+                <button type='submit' name='save' style="border:none;background-color:transparent"> <i class="fa-solid fa-file-arrow-down" style="color: #4b6d75;" name="hello" ></i>
+                               <p class="text-para">Save</p>
+                               </a></button>
                             </div>
                             <div class="col-1">
                                 <i class="fa-solid fa-envelope-open-text" class="btn-close"
@@ -153,31 +158,31 @@
               <label for="inputPassword6" class="col-form-label form-label">Acc ID :</label>
             </div>
             <div class="col-lg-9 mt-3">
-              <input type="text"  class="form-input">
+              <input type="text"  class="form-input" id="accId" name="accId" value="<?php echo $countRow + 1?>">
             </div>
             <div class="col-lg-3 mt-3">
                 <label for="inputPassword6" class="col-form-label form-label">Party Name :</label>
               </div>
               <div class="col-lg-9 mt-3">
-                <input type="text"  class="form-input">
+                <input type="text"  class="form-input" name="partyName">
               </div>
               <div class="col-lg-3 mt-3">
                 <label for="inputPassword6" class="col-form-label form-label">Contact :</label>
               </div>
               <div class="col-lg-9 mt-3">
-                <input type="text"  class="form-input">
+                <input type="text"  class="form-input" name="contact">
               </div>
               <div class="col-lg-3 mt-3">
                 <label for="inputPassword6" class="col-form-label form-label">Date :</label>
               </div>
               <div class="col-lg-9 mt-3">
-                <input type="date"  class="form-input">
+                <input type="date"  class="form-input" name="date">
               </div>
               <div class="col-lg-3 mt-3">
                 <label for="inputPassword6" class="col-form-label form-label">Address :</label>
               </div>
               <div class="col-lg-9 mt-3">
-                <textarea name="" id="" cols="43" rows="9"></textarea>
+                <textarea  id="" cols="43" rows="9" name="address"></textarea>
               </div>
           </div>
          
@@ -191,22 +196,22 @@
               <label for="inputPassword6" class="col-form-label form-label">Gold :</label>
             </div>
             <div class="col-lg-9">
-              <input type="text"  class="form-input" value="0.00">
+              <input type="text"  class="form-input" value="0.00" name="recGold">
             </div>
             <div class="col-lg-3 mt-3">
                 <label for="inputPassword6" class="col-form-label form-label">Cash :</label>
               </div>
               <div class="col-lg-9 mt-3">
-                <input type="text"  class="form-input" value="0.00">
+                <input type="text"  class="form-input" value="0.00" name="recCash">
               </div>
               <div class="col-lg-3 mt-3">
                 <label for="inputPassword6" class="col-form-label form-label">Gold Type :</label>
               </div>
               <div class="col-lg-9 mt-3">
-               <select>
-                <option value="t1">T1</option>
-                <option value="t2">T2</option>
-                <option value="t3">T3</option>
+               <select name="recGoldType">
+                <option value="Teezabi">Teezabi</option>
+                <option value="piece">piece</option>
+                
 
                </select>
               </div>
@@ -216,22 +221,21 @@
                 <label for="inputPassword6" class="col-form-label form-label">Gold :</label>
               </div>
               <div class="col-lg-9">
-                <input type="text"  class="form-input" value="0.00">
+                <input type="text"  class="form-input" value="0.00" name="payGold">
               </div>
               <div class="col-lg-3 mt-3">
                 <label for="inputPassword6" class="col-form-label form-label">Cash :</label>
               </div>
               <div class="col-lg-9 mt-3">
-                <input type="text"  class="form-input" value="0.00">
+                <input type="text"  class="form-input" value="0.00" name="payCash">
               </div>
               <div class="col-lg-3 mt-3">
                 <label for="inputPassword6" class="col-form-label form-label">Gold Type :</label>
               </div>
               <div class="col-lg-9 mt-3">
-               <select>
-                <option value="t1">T1</option>
-                <option value="t2">T2</option>
-                <option value="t3">T3</option>
+               <select name="payGoldType">
+                <option value="Teezabi">Teezabi</option>
+                <option value="piece">piece</option>
 
                </select>
               </div>
@@ -239,6 +243,7 @@
     </div>
 </div>
                 </section>
+                </form>
                 <!-- first section -->
 
                  <!-- search section -->
@@ -319,39 +324,27 @@
                        <td>cash_pay</td>
                        <td>type_pay</td>
                      </tr>
+                     <?php
+                     $query = $pdo ->query('select * from partiesprofile');
+                     $row = $query->fetchAll(PDO::FETCH_ASSOC);
+                     foreach($row as $tbData){
+                      ?>  
                      <tr>
                        <td><i class="fa-solid fa-caret-right" style="color: #4b6d75;"></i></td>
-                       <td>1</td>
-                       <td>shabbir</td>
-                       <td>0.00</td>
-                       <td>0.00</td>
-                       <td></td>
-                       <td>0.00</td>
-                       <td>0.00</td>
-                       <td></td>
-                     </tr>
-                     <tr>
-                       <td></td>
-                       <td>2</td>
-                       <td>affan</td>
-                       <td>-0.00</td>
-                       <td>-0.00</td>
-                       <td></td>
-                       <td>0.00</td>
-                       <td>0.00</td>
-                       <td></td>
-                     </tr>
-                     <tr>
-                       <td><i class="fa-solid fa-caret-right" style="color: #4b6d75;"></i></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                     </tr>
+                       <td><?php echo $tbData['acc_id']?></td>
+                       <td><?php echo $tbData['party_name']?></td>
+                       <td><?php echo $tbData['recivable_gold']?></td>
+                       <td><?php echo $tbData['recivable_cash']?></td>
+                       <td><?php echo $tbData['recivable_Type']?></td>
+                       <td><?php echo $tbData['payable_gold']?></td>
+                       <td><?php echo $tbData['payable_cash']?></td>
+                       <td><?php echo $tbData['payable_Type']?></td>
+                     </tr> 
+                      <?php
+                     }
+                     ?>
+                     
+                  
                     </table>
                    </div>
                 </section>
