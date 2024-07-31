@@ -8,4 +8,13 @@ $(document).ready(function(){
         // $("#profile-form").show();
         alert("hello")
     })
+    
+$.ajax({
+url:"ajax.php",
+type:"get",
+success:function(){
+$("#productData").load("ajax.php");
+}
+})
+    
 })

@@ -24,7 +24,8 @@ include('query.php')
 
             </div>
         <div class="col-lg-4 grid2">
-            <div class="grid2-child grid2-item-1"></div>
+            <div class="grid2-child grid2-item-1"  data-bs-toggle="modal"
+            data-bs-target="#new-modal" ></div>
             <div class="grid2-child grid2-item-2"></div>
             <div class="grid2-child grid2-item-3"></div>
                 <div class="grid2-child grid2-item-4"></div>
@@ -354,7 +355,227 @@ include('query.php')
         </div>
     </div>
     
+    <div class="modal fade" id="new-modal" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog"
+    aria-labelledby="modalTitleId" aria-hidden="true">
+    <div class="modal-dialog  modal-dialog-centered" role="document" id="new-window">
+      <div class="modal-content">
+        <div class="modal-header">
+
+
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+
+
+        </div>
+        <div class="modal-body container-fluid ">
+          <!-- first section -->
+           <form action="" method="post">
+          <section id="">
+              <div class="row">
+                      <div class="col-lg-10 row">
+                        <div class="col-lg-1 col-1">
+                            <i class="fa-solid fa-circle-up" style="color: #4b6d75;"></i>
+                            <p class="text-para">Top</p>
+                        </div>
+                            <div class="col-lg-1 col-1">
+                                <i class="fa-regular fa-square-caret-left" style="color: #4b6d75;"></i>
+                                <p class="text-para">Prev</p>
+                            </div>
+                            <div class="col-lg-1 col-1">
+                                <i class="fa-regular fa-square-caret-right" style="color: #4b6d75;"></i>
+                                <p class="text-para">Next</p>
+                            </div>
+                            <div class="col-lg-1 col-1">
+                                <i class="fa-solid fa-circle-down" style="color: #4b6d75;"></i>
+                                <p class="text-para">Bottom</p>
+                            </div>
+                            <div class="col-lg-1 col-1">
+                                <i class="fa-solid fa-magnifying-glass"  style="color: #4b6d75;" id="search-icon"></i>
+                                <p class="text-para">Search</p>
+                            </div>
+                            <div class="col-lg-1 col-1">
+                                <i class="fa-solid fa-scissors" style="color: #4b6d75;"></i>
+                                <p class="text-para">Delete </p>
+                            </div>
+                            <div class="col-lg-1 col-1">
+                                <button type='submit' name='save' style="border:none;background-color:transparent"> <i class="fa-solid fa-file-arrow-down" style="color: #4b6d75;" name="hello" ></i>
+                               <p class="text-para">Save</p>
+                               </a></button>
+                            </div>
+                            <div class="col-lg-1 col-1">
+                                <i class="fa-sharp fa-regular fa-pen-to-square" style="color: #4b6d75;"></i>                                <p class="text-para">Edit</p>
+                            </div>
+                            <div class="col-lg-1 col-1">
+                                <i class="fa-solid fa-envelope-open-text" style="color: #4b6d75;"></i>
+                                <p class="text-para">New</p>
+                            </div>
+                            <div class=" col-lg-2 col-1 px-0" style="background-color: #4b6d75;">
+                                <p class="text-para text-light text-center">Bill Reference</p>
+                            </div>
+                            
+                            <div class="col-lg-1 col-1">
+                                <i class="fa-solid fa-envelope-open-text" class="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close" style="color: #4b6d75;"></i>
+                                <p class="text-para">Exit</p>
+                            </div>
+                           
+
+                      </div>
+                      <div class="col-lg-2 row customer-col ">
+<table  class="table" id='new-table'>
+
+  <tr class='text-upercase'>
+    <td>slip</td>
+    <td>bill</td>
+  </tr>
+  <tr class='text-capitalize'>
+    <td>gold to rs</td>
+    <td>rs to gold </td>
+  </tr>
+</table>
+                      </div>
+                    </div>
+            <div class="container ">
+              <h5 class="text-uppercase py-2 text-primary-color ">customer information</h5>
+
+            
+                <div class="row mt-3" id="">
+                    <div class="col-lg-4 row">
+<div class="col-lg-4 mt-2">
+    <label for="inputPassword6" class="col-form-label form-label">To :</label>
+</div>
+<div class="col-lg-8 mt-2">
+    <input type="text"  class="form-input" id="searchId"  name="partId">
+</div>
+
+<div class="col-lg-4 mt-2">
+    <label for="inputPassword6" class="col-form-label form-label">Party Name :</label>
+</div>
+<div class="col-lg-8 mt-2">
+    <input type="text"  class="form-input" name="partyName">
+</div>
+
+<div class="col-lg-4 mt-2">
+    <label for="inputPassword6" class="col-form-label form-label">Date :</label>
+</div>
+<div class="col-lg-8 mt-2">
+    <input type="date"  class="form-input" name="partyDate">
+</div>
+
+<div class="col-lg-4 mt-2">
+    <label for="inputPassword6" class="col-form-label form-label">Gold Type:</label>
+  </div>
+  <div class="col-lg-8 mt-2">
+   <select name="recGoldType" name="partyGoldType">
+    <option value="Teezabi">Teezabi</option>
+    <option value="piece">piece</option>
     
+
+   </select>
+  </div>
+
+<div class="col-lg-4 mt-2">
+    <label for="inputPassword6" class="col-form-label form-label">Gold Recieve :</label>
+</div>
+<div class="col-lg-8 mt-2">
+    <input type="text"  class="form-input" name="partGoldRecieveType">
+</div>
+                    </div>
+                    <div class="col-lg-4 mt-auto">
+                        <button class="convert-button">convert to Teezabi</button>
+                        <button class="convert-button">convert to piece</button>
+                    </div>
+                    <div class="col-lg-4">
+                        <button class="btn-send  py-1"style='float: right;' ><i class="fa-sharp fa-solid fa-arrow-rotate-right" style="color: #4b6d75;" ></i> SEND</button>
+                        <div class="row mt-5 py-3 px-0" style="background-color: #4b6d75;">
+                            <div class="col-lg-6 mt-5">
+                                <p class="text-para text-light me-5  text-uppercase">gold :</p>
+                                <p class="text-para text-light me-5 text-uppercase">cash :</p>
+
+                            </div>
+                            <div class="col-lg-6 mt-auto">    <p class="text-para text-light me-5 text-uppercase ">nill :</p></div>
+                        </div>
+                    </div>
+                    </div>
+           
+            </div>
+           <div class="container mt-3 customer-col" >
+           <h6 class="text-uppercase py-2 text-primary-color text-bold">casting detail</h5>
+           <div class="row ">
+  <div class="col-lg-2">
+    <label for="inputPassword6" class="col-form-label form-label d-flex">Rati:</label>
+    <input type="text" id="inputPassword6" class="form-input">
+  </div>
+  <div class="col-lg-2">
+    <label for="inputPassword6" class="col-form-label  form-label d-flex">Casting:</label>
+    <input type="text" id="inputPassword6" class="form-input">
+  </div>
+  <div class="col-lg-2">
+    <label for="inputPassword6" class="col-form-label form-label d-flex">Casting Return:</label>
+    <input type="text" id="inputPassword6" class="form-input">
+  </div>
+  <div class="col-lg-2">
+    <label for="inputPassword6" class="col-form-label form-label d-flex ">Ghati:</label>
+    <input type="text" id="inputPassword6" class="form-input bg-danger">
+  </div>
+  <div class="col-lg-2">
+    <label for="inputPassword6" class="col-form-label form-label d-flex">Total:</label>
+    <input type="text" id="inputPassword6" class="form-input bg-danger">
+  </div>
+  <div class="col-lg-2">
+    <label for="inputPassword6" class="col-form-label form-label d-flex">Pure Gold: </label>
+    <input type="text" id="inputPassword6" class="form-input bg-danger">
+  </div>
+  <div class="col-lg-2">
+    <label for="inputPassword6" class="col-form-label form-label d-flex">Laboure</label>
+    <input type="text" id="inputPassword6" class="form-input bg-danger">
+  </div>
+  <div class="col-lg-2">
+    <label for="inputPassword6" class="col-form-label form-label d-flex">Cash Recieve:</label>
+    <input type="text" id="inputPassword6" class="form-input">
+  </div>
+  <div class="col-lg-2">
+    <label for="inputPassword6" class="col-form-label form-label d-flex">Cash Return:</label>
+    <input type="text" id="inputPassword6" class="form-input">
+  </div>
+  <div class="col-lg-2">
+    <label for="inputPassword6" class="col-form-label form-label d-flex">Gold Return:</label>
+    <input type="text" id="inputPassword6" class="form-input">
+  </div>
+  <div class="col-lg-2">
+    <label for="inputPassword6" class="col-form-label form-label d-flex">Less Casting:</label>
+    <input type="text" id="inputPassword6" class="form-input">
+  </div>
+  <div class="col-lg-2 mt-4">
+    
+    <input type="text" id="inputPassword6" class="form-input">
+  </div>
+  <div class="col-lg-2 my-2">
+  <button class="convert-button text-light">convert to Teezabi</button>
+  </div>
+ 
+</div>
+<div class="row justify-content-center">
+<div class="col-lg-12">
+<label class="form-label">Remarks :</label>
+<textarea class="form-input"  cols="43" rows="3"  name="" id="" rows="3"></textarea>
+</div>
+
+</div>
+           </div>
+          </section>
+          </form>
+          <!-- second section -->
+
+        </div>
+
+      </div>
+    </div>
+
+
+  </div>
+  
     <script
     src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
