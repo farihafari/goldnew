@@ -156,34 +156,34 @@ include('query.php')
         <h5 class="text-center text-uppercase mt-3 ">customer information</h5>
         <div class="row mt-5">
             <div class="col-lg-3 mt-3">
-              <label for="inputPassword6" class="col-form-label form-label">Acc ID :</label>
+              <label for="" class="col-form-label form-label">Acc ID :</label>
             </div>
             <div class="col-lg-9 mt-3">
               <input type="text"  class="form-input" id="accId" name="accId" value="<?php echo $countRow + 1?>">
             </div>
             <div class="col-lg-3 mt-3">
-                <label for="inputPassword6" class="col-form-label form-label">Party Name :</label>
+                <label for="" class="col-form-label form-label">Party Name :</label>
               </div>
               <div class="col-lg-9 mt-3">
                 <input type="text"  class="form-input" name="partyName">
               </div>
               <div class="col-lg-3 mt-3">
-                <label for="inputPassword6" class="col-form-label form-label">Contact :</label>
+                <label for="" class="col-form-label form-label">Contact :</label>
               </div>
               <div class="col-lg-9 mt-3">
                 <input type="text"  class="form-input" name="contact">
               </div>
               <div class="col-lg-3 mt-3">
-                <label for="inputPassword6" class="col-form-label form-label">Date :</label>
+                <label for="" class="col-form-label form-label">Date :</label>
               </div>
               <div class="col-lg-9 mt-3">
                 <input type="date"  class="form-input" name="date">
               </div>
               <div class="col-lg-3 mt-3">
-                <label for="inputPassword6" class="col-form-label form-label">Address :</label>
+                <label for="" class="col-form-label form-label">Address :</label>
               </div>
               <div class="col-lg-9 mt-3">
-                <textarea  id="" cols="43" rows="9" name="address"></textarea>
+                <textarea  cols="43" rows="9" name="address"></textarea>
               </div>
           </div>
          
@@ -194,19 +194,19 @@ include('query.php')
         <div class="row">
             
             <div class="col-lg-3">
-              <label for="inputPassword6" class="col-form-label form-label">Gold :</label>
+              <label for="" class="col-form-label form-label">Gold :</label>
             </div>
             <div class="col-lg-9">
               <input type="text"  class="form-input" value="0.00" name="recGold">
             </div>
             <div class="col-lg-3 mt-3">
-                <label for="inputPassword6" class="col-form-label form-label">Cash :</label>
+                <label for="" class="col-form-label form-label">Cash :</label>
               </div>
               <div class="col-lg-9 mt-3">
                 <input type="text"  class="form-input" value="0.00" name="recCash">
               </div>
               <div class="col-lg-3 mt-3">
-                <label for="inputPassword6" class="col-form-label form-label">Gold Type :</label>
+                <label for="" class="col-form-label form-label">Gold Type :</label>
               </div>
               <div class="col-lg-9 mt-3">
                <select name="recGoldType">
@@ -219,19 +219,19 @@ include('query.php')
             <p class="text-capitalize form-para mt-5">payable</p>
 
               <div class="col-lg-3">
-                <label for="inputPassword6" class="col-form-label form-label">Gold :</label>
+                <label for="" class="col-form-label form-label">Gold :</label>
               </div>
               <div class="col-lg-9">
                 <input type="text"  class="form-input" value="0.00" name="payGold">
               </div>
               <div class="col-lg-3 mt-3">
-                <label for="inputPassword6" class="col-form-label form-label">Cash :</label>
+                <label for="" class="col-form-label form-label">Cash :</label>
               </div>
               <div class="col-lg-9 mt-3">
                 <input type="text"  class="form-input" value="0.00" name="payCash">
               </div>
               <div class="col-lg-3 mt-3">
-                <label for="inputPassword6" class="col-form-label form-label">Gold Type :</label>
+                <label for="" class="col-form-label form-label">Gold Type :</label>
               </div>
               <div class="col-lg-9 mt-3">
                <select name="payGoldType">
@@ -293,7 +293,7 @@ include('query.php')
                     <div class="mb-3 row justify-content-end">
                       <div class="col-lg-7">
                         <label for="" class="form-label pe-4 text-primary-color">Search Bar: </label>
-                        <input type="password" class="search-input ">
+                        <input type="text" class="search-input ">
                       </div>
                       <div class="form-check form-check-inline col-lg-4 d-flex justify-content-end">
                         <input class="" type="radio" name="inlineRadioOptions" id="inlineRadio1"
@@ -440,47 +440,9 @@ include('query.php')
               <h5 class="text-uppercase py-2 text-primary-color ">customer information</h5>
 
             
-                <div class="row mt-3" id="">
-                    <div class="col-lg-4 row">
-<div class="col-lg-4 mt-2">
-    <label for="inputPassword6" class="col-form-label form-label">To :</label>
-</div>
-<div class="col-lg-8 mt-2">
-    <input type="text"  class="form-input" id="searchId"  name="partyId">
-</div>
-
-<div class="col-lg-4 mt-2">
-    <label for="inputPassword6" class="col-form-label form-label">Party Name :</label>
-</div>
-<div class="col-lg-8 mt-2">
-    <input type="text"  class="form-input" name="partyName">
-</div>
-
-<div class="col-lg-4 mt-2">
-    <label for="inputPassword6" class="col-form-label form-label">Date :</label>
-</div>
-<div class="col-lg-8 mt-2">
-    <input type="date"  class="form-input" name="partyDate">
-</div>
-
-<div class="col-lg-4 mt-2">
-    <label for="inputPassword6" class="col-form-label form-label">Gold Type:</label>
-  </div>
-  <div class="col-lg-8 mt-2">
-   <select name="recGoldType" name="partyGoldType">
-    <option value="Teezabi">Teezabi</option>
-    <option value="piece">piece</option>
-    
-
-   </select>
-  </div>
-
-<div class="col-lg-4 mt-2">
-    <label for="inputPassword6" class="col-form-label form-label">Gold Recieve :</label>
-</div>
-<div class="col-lg-8 mt-2">
-    <input type="text"  class="form-input" name="partGoldRecieveType">
-</div>
+                <div class="row mt-3" >
+                    <div class="col-lg-4 row" id="formData">
+                     
                     </div>
                     <div class="col-lg-4 mt-auto">
                         <button class="convert-button">convert to Teezabi</button>
@@ -504,52 +466,52 @@ include('query.php')
            <h6 class="text-uppercase py-2 text-primary-color text-bold">casting detail</h5>
            <div class="row ">
   <div class="col-lg-2">
-    <label for="inputPassword6" class="col-form-label form-label d-flex">Rati:</label>
-    <input type="text" id="inputPassword6" class="form-input">
+    <label for="" class="col-form-label form-label d-flex">Rati:</label>
+    <input type="text"  class="form-input">
   </div>
   <div class="col-lg-2">
-    <label for="inputPassword6" class="col-form-label  form-label d-flex">Casting:</label>
-    <input type="text" id="inputPassword6" class="form-input">
+    <label for="" class="col-form-label  form-label d-flex">Casting:</label>
+    <input type="text"  class="form-input">
   </div>
   <div class="col-lg-2">
-    <label for="inputPassword6" class="col-form-label form-label d-flex">Casting Return:</label>
-    <input type="text" id="inputPassword6" class="form-input">
+    <label for="" class="col-form-label form-label d-flex">Casting Return:</label>
+    <input type="text"  class="form-input">
   </div>
   <div class="col-lg-2">
-    <label for="inputPassword6" class="col-form-label form-label d-flex ">Ghati:</label>
-    <input type="text" id="inputPassword6" class="form-input bg-danger">
+    <label for="" class="col-form-label form-label d-flex ">Ghati:</label>
+    <input type="text"  class="form-input bg-danger">
   </div>
   <div class="col-lg-2">
-    <label for="inputPassword6" class="col-form-label form-label d-flex">Total:</label>
-    <input type="text" id="inputPassword6" class="form-input bg-danger">
+    <label for="" class="col-form-label form-label d-flex">Total:</label>
+    <input type="text"  class="form-input bg-danger">
   </div>
   <div class="col-lg-2">
-    <label for="inputPassword6" class="col-form-label form-label d-flex">Pure Gold: </label>
-    <input type="text" id="inputPassword6" class="form-input bg-danger">
+    <label for="" class="col-form-label form-label d-flex">Pure Gold: </label>
+    <input type="text"  class="form-input bg-danger">
   </div>
   <div class="col-lg-2">
-    <label for="inputPassword6" class="col-form-label form-label d-flex">Laboure</label>
-    <input type="text" id="inputPassword6" class="form-input bg-danger">
+    <label for="" class="col-form-label form-label d-flex">Laboure</label>
+    <input type="text"  class="form-input bg-danger">
   </div>
   <div class="col-lg-2">
-    <label for="inputPassword6" class="col-form-label form-label d-flex">Cash Recieve:</label>
-    <input type="text" id="inputPassword6" class="form-input">
+    <label for="" class="col-form-label form-label d-flex">Cash Recieve:</label>
+    <input type="text"  class="form-input">
   </div>
   <div class="col-lg-2">
-    <label for="inputPassword6" class="col-form-label form-label d-flex">Cash Return:</label>
-    <input type="text" id="inputPassword6" class="form-input">
+    <label for="" class="col-form-label form-label d-flex">Cash Return:</label>
+    <input type="text"  class="form-input">
   </div>
   <div class="col-lg-2">
-    <label for="inputPassword6" class="col-form-label form-label d-flex">Gold Return:</label>
-    <input type="text" id="inputPassword6" class="form-input">
+    <label for="" class="col-form-label form-label d-flex">Gold Return:</label>
+    <input type="text"  class="form-input">
   </div>
   <div class="col-lg-2">
-    <label for="inputPassword6" class="col-form-label form-label d-flex">Less Casting:</label>
-    <input type="text" id="inputPassword6" class="form-input">
+    <label for="" class="col-form-label form-label d-flex">Less Casting:</label>
+    <input type="text"  class="form-input">
   </div>
   <div class="col-lg-2 mt-4">
     
-    <input type="text" id="inputPassword6" class="form-input">
+    <input type="text"  class="form-input">
   </div>
   <div class="col-lg-2 my-2">
   <button class="convert-button text-light">convert to Teezabi</button>
@@ -559,7 +521,7 @@ include('query.php')
 <div class="row justify-content-center">
 <div class="col-lg-12">
 <label class="form-label">Remarks :</label>
-<textarea class="form-input"  cols="43" rows="3"  name="" id="" rows="3"></textarea>
+<textarea class="form-input"  cols="43" rows="3"  name=""  rows="3"></textarea>
 </div>
 
 </div>

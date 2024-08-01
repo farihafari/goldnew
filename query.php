@@ -46,50 +46,9 @@ if(isset($_POST['partyId'])){
     $query->bindParam('pid',$search);
     $query ->execute();
     $row = $query->fetch(PDO::FETCH_ASSOC);
-   var_dump($row);
-die();
-?>
+//    var_dump($row);
+    // echo "<script>alert('".$row['acc_id']."')</script>";
+    echo json_encode($row);
 
-
-<div class="col-lg-4 mt-2">
-    <label for="inputPassword6" class="col-form-label form-label">To :</label>
-</div>
-<div class="col-lg-8 mt-2">
-    <input type="text"  class="form-input" id="searchId" value='<?php echo $row['acc_id'] ?>' name="partyId">
-</div>
-
-<div class="col-lg-4 mt-2">
-    <label for="inputPassword6" class="col-form-label form-label">Party Name :</label>
-</div>
-<div class="col-lg-8 mt-2">
-    <input type="text"  class="form-input" value='<?php echo $row['party_name'] ?>' name="partyName">
-</div>
-
-<div class="col-lg-4 mt-2">
-    <label for="inputPassword6" class="col-form-label form-label">Date :</label>
-</div>
-<div class="col-lg-8 mt-2">
-    <input type="date"  class="form-input" name="partyDate" value='<?php echo $row['datetime'] ?>'>
-</div>
-
-<div class="col-lg-4 mt-2">
-    <label for="inputPassword6" class="col-form-label form-label">Gold Type:</label>
-  </div>
-  <div class="col-lg-8 mt-2">
-   <select name="recGoldType" name="partyGoldType">
-    <option value='<?php echo $row['recivable_Type'] ?>'><?php echo $row['recivable_Type'] ?></option>
- 
-    
-
-   </select>
-  </div>
-
-<div class="col-lg-4 mt-2">
-    <label for="inputPassword6" class="col-form-label form-label">Gold Recieve :</label>
-</div>
-<div class="col-lg-8 mt-2">
-    <input type="text"  class="form-input" name="partyGoldRecieveType" value='<?php echo $row['recivable_gold'] ?>'>
-</div>
-<?php
 }
 ?>
