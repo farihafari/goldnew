@@ -8,13 +8,21 @@ $(document).ready(function(){
         // $("#profile-form").show();
         alert("hello")
     })
-    
-$.ajax({
-url:"ajax.php",
-type:"get",
-success:function(){
-$("#productData").load("ajax.php");
-}
-})
+    // search data
+    $("#searchId").on('keyup',function(){
+        let searchData = $("#searchId").val();
+        $.ajax({
+            url:"query.php",
+            type:"post",
+            data:{
+                "partyId":searchData
+            },
+            success:function(response){
+        //    console.log(response);
+           alert(response);
+        // $("#productData").html(response);
+            }
+        })
+    })
     
 })

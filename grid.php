@@ -354,7 +354,7 @@ include('query.php')
             </div>
         </div>
     </div>
-    
+    <!--new modal  -->
     <div class="modal fade" id="new-modal" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog"
     aria-labelledby="modalTitleId" aria-hidden="true">
     <div class="modal-dialog  modal-dialog-centered" role="document" id="new-window">
@@ -446,7 +446,7 @@ include('query.php')
     <label for="inputPassword6" class="col-form-label form-label">To :</label>
 </div>
 <div class="col-lg-8 mt-2">
-    <input type="text"  class="form-input" id="searchId"  name="partId">
+    <input type="text"  class="form-input" id="searchId"  name="partyId">
 </div>
 
 <div class="col-lg-4 mt-2">
