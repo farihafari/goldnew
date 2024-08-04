@@ -38,17 +38,36 @@ echo "<script>alert('data added successfully');
 location.assign('grid.php')
 </script>";
         
- }
-//  searching work
-if(isset($_POST['partyId'])){
-    $search =$_POST['partyId'];
-    $query = $pdo ->prepare("select * from partiesprofile where acc_id=:pid");
-    $query->bindParam('pid',$search);
-    $query ->execute();
-    $row = $query->fetch(PDO::FETCH_ASSOC);
-//    var_dump($row);
-    // echo "<script>alert('".$row['acc_id']."')</script>";
-    echo json_encode($row);
+ };
+//  search 
 
+if (isset($_POST['search'])) {
+    $searchValue = $_POST['search'];
+
+    // Prepare and execute the query
+    $query = "SELECT * FROM partiesprofile WHERE acc_id = :searchValue";
+    $stmt = $pdo->prepare($query);
+    $stmt->bindParam(':searchValue', $searchValue, PDO::PARAM_STR);
+    $stmt->execute();
+
+    // Fetch the data
+    $result = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    // If data found, send back JSON response
+    if ($result) {
+        echo json_encode([
+            'partyName' => $result['party_name'],
+            'date' => $result['datetime'],
+            'goldType' => $result['recivable_Type'],
+            'goldRecieve' => $result['recivable_gold']
+        ]);
+    } else {
+        echo json_encode([
+            'partyName' => '',
+            'date' => '',
+            'goldType' => '',
+            'goldRecieve' => ''
+        ]);
+    }
 }
 ?>

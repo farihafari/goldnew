@@ -369,7 +369,7 @@ include('query.php')
         </div>
         <div class="modal-body container-fluid ">
           <!-- first section -->
-           <form action="" method="post">
+           <form action="" method="dialog">
           <section id="">
               <div class="row">
                       <div class="col-lg-10 row">
@@ -442,7 +442,45 @@ include('query.php')
             
                 <div class="row mt-3" >
                     <div class="col-lg-4 row" id="formData">
-                     
+                    <div class="col-lg-4 mt-2">
+    <label for="inputPassword6" class="col-form-label form-label">To :</label>
+</div>
+<div class="col-lg-8 mt-2">
+    <input type="text"  class="form-input" id="searchId"  name="search">
+</div>
+
+<div class="col-lg-4 mt-2">
+    <label for="inputPassword6" class="col-form-label form-label">Party Name :</label>
+</div>
+<div class="col-lg-8 mt-2">
+    <input type="text"  class="form-input" name="party-name">
+</div>
+
+<div class="col-lg-4 mt-2">
+    <label for="inputPassword6" class="col-form-label form-label">Date :</label>
+</div>
+<div class="col-lg-8 mt-2">
+    <input type="date"  class="form-input" name="party-date">
+</div>
+
+<div class="col-lg-4 mt-2">
+    <label for="inputPassword6" class="col-form-label form-label">Gold Type:</label>
+  </div>
+  <div class="col-lg-8 mt-2">
+   <select name="party-gold-type" >
+    <option value="Teezabi">Teezabi</option>
+    <option value="piece">piece</option>
+    
+
+   </select>
+  </div>
+
+<div class="col-lg-4 mt-2">
+    <label for="inputPassword6" class="col-form-label form-label">Gold Recieve :</label>
+</div>
+<div class="col-lg-8 mt-2">
+    <input type="text"  class="form-input" name="part-gold-recieve-type">
+</div>
                     </div>
                     <div class="col-lg-4 mt-auto">
                         <button class="convert-button">convert to Teezabi</button>
@@ -549,6 +587,6 @@ include('query.php')
     integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
     crossorigin="anonymous"
 ></script>
-<script src="assets/js/script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
