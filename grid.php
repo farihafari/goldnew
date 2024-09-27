@@ -162,7 +162,7 @@ include('query.php')
               <input type="text"  class="form-input" id="accId" name="accId" value="<?php echo $countRow + 1?>">
             </div>
             <div class="col-lg-3 mt-3">
-                <label for="" class="col-form-label form-label">Party Name :</label>
+                <label for="" class="col-form-label form-label">Party Name....... :</label>
               </div>
               <div class="col-lg-9 mt-3">
                 <input type="text"  class="form-input" name="partyName">
@@ -211,7 +211,7 @@ include('query.php')
               <div class="col-lg-9 mt-3">
                <select name="recGoldType">
                 <option value="Teezabi">Teezabi</option>
-                <option value="piece">piece</option>
+                <option value="Piece">piece</option>
                 
 
                </select>
@@ -450,7 +450,7 @@ include('query.php')
 </div>
 
 <div class="col-lg-4 mt-2">
-    <label for="inputPassword6" class="col-form-label form-label">Party Name :</label>
+    <label for="inputPassword6" class="col-form-label form-label">Party Nameeeee :</label>
 </div>
 <div class="col-lg-8 mt-2">
     <input type="text"  class="form-input" name="party-name">
@@ -464,40 +464,58 @@ include('query.php')
 </div>
 
 <div class="col-lg-4 mt-2">
-    <label for="inputPassword6" class="col-form-label form-label">Gold Type:</label>
+    <label for="inputPassword6" class="col-form-label form-label">Gold Type : </label>
   </div>
   <div class="col-lg-8 mt-2">
-   <select name="party-gold-type" >
+   <select onchange="convertType()" name="party-gold-type" id="party-gold-type">
     <option value="Teezabi">Teezabi</option>
-    <option value="piece">piece</option>
+    <option value="Piece">piece</option>
     
 
    </select>
   </div>
 
 <div class="col-lg-4 mt-2">
-    <label for="inputPassword6" class="col-form-label form-label">Gold Recieve :</label>
+    <label for="inputPassword6" class="col-form-label form-label">Gold Recieveee :</label>
 </div>
 <div class="col-lg-8 mt-2">
-    <input type="text"  class="form-input" name="part-gold-recieve-type">
+    <input type="text"  class="form-input" id="goldReceive"  class="gold-receive-input">
 </div>
                     </div>
                     <div class="col-lg-4 mt-auto">
-                        <button class="convert-button">convert to Teezabi</button>
-                        <button class="convert-button">convert to piece</button>
+                  
+                    <!-- Button to convert to Teezabi -->
+                    <button id="btn-teezabi" name="btn-gold-type" class="convert-button" >
+                        Convert to Teezabi
+                    </button>
+
+                    <!-- Button to convert to Piece -->
+                    <button id="btn-piece" name="btn-gold-type" class="convert-button" >
+                        Convert to Piece
+                    </button>
+                    <br>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <button id="btn-teezabi-value" style="border:none ;background-color:none">Nill</button>
+                      </div>
+                      <div class="col-md-6"><button style="border:none ;background-color:none" id="btn-piece-value">Nill</button></div>
                     </div>
+                </div>
+
                     <div class="col-lg-4">
                         <button class="btn-send  py-1"style='float: right;' ><i class="fa-sharp fa-solid fa-arrow-rotate-right" style="color: #4b6d75;" ></i> SEND</button>
                         <div class="row mt-5 py-3 px-0" style="background-color: #4b6d75;">
                             <div class="col-lg-6 mt-5">
-                                <p class="text-para text-light me-5  text-uppercase">gold :</p>
-                                <p class="text-para text-light me-5 text-uppercase">cash :</p>
+                                <p class="text-para text-light me-5  text-uppercase">gold : <span name="total-gold" id ="gold-receive"></span></p>
+                                <p class="text-para text-light me-5 text-uppercase">cash :  <span name="pay-cash"></span></p>
 
                             </div>
-                            <div class="col-lg-6 mt-auto">    <p class="text-para text-light me-5 text-uppercase ">nill :</p></div>
+                            <!-- <div class="col-lg-6 mt-auto">    <p class="text-para text-light me-5 text-uppercase ">nill :</p></div> -->
                         </div>
                     </div>
                     </div>
+
+                    <!-- here is end of loop -->
            
             </div>
            <div class="container mt-3 customer-col" >
@@ -505,47 +523,47 @@ include('query.php')
            <div class="row ">
   <div class="col-lg-2">
     <label for="" class="col-form-label form-label d-flex">Rati:</label>
-    <input type="text"  class="form-input">
+    <input type="text" name="ratti"  class="form-input">
   </div>
   <div class="col-lg-2">
     <label for="" class="col-form-label  form-label d-flex">Casting:</label>
-    <input type="text"  class="form-input">
+    <input type="text" name="casting"  class="form-input">
   </div>
   <div class="col-lg-2">
     <label for="" class="col-form-label form-label d-flex">Casting Return:</label>
-    <input type="text"  class="form-input">
+    <input type="text" name="casting-return"  class="form-input">
   </div>
   <div class="col-lg-2">
     <label for="" class="col-form-label form-label d-flex ">Ghati:</label>
-    <input type="text"  class="form-input bg-danger">
+    <input type="text" name="ghati"  class="form-input bg-danger">
   </div>
   <div class="col-lg-2">
     <label for="" class="col-form-label form-label d-flex">Total:</label>
-    <input type="text"  class="form-input bg-danger">
+    <input type="text" name="total"  class="form-input bg-danger">
   </div>
   <div class="col-lg-2">
     <label for="" class="col-form-label form-label d-flex">Pure Gold: </label>
-    <input type="text"  class="form-input bg-danger">
+    <input type="text" name="pure-gold" class="form-input bg-danger">
   </div>
   <div class="col-lg-2">
     <label for="" class="col-form-label form-label d-flex">Laboure</label>
-    <input type="text"  class="form-input bg-danger">
+    <input type="text" name="labroure"  class="form-input bg-danger">
   </div>
   <div class="col-lg-2">
     <label for="" class="col-form-label form-label d-flex">Cash Recieve:</label>
-    <input type="text"  class="form-input">
+    <input type="text" name="cash-receive"  class="form-input">
   </div>
   <div class="col-lg-2">
     <label for="" class="col-form-label form-label d-flex">Cash Return:</label>
-    <input type="text"  class="form-input">
+    <input type="text" name="cash-return"  class="form-input">
   </div>
   <div class="col-lg-2">
     <label for="" class="col-form-label form-label d-flex">Gold Return:</label>
-    <input type="text"  class="form-input">
+    <input type="text" name="gold-return"  class="form-input">
   </div>
   <div class="col-lg-2">
     <label for="" class="col-form-label form-label d-flex">Less Casting:</label>
-    <input type="text"  class="form-input">
+    <input type="text" name="less-casting" class="form-input">
   </div>
   <div class="col-lg-2 mt-4">
     
@@ -590,3 +608,64 @@ include('query.php')
 <script src="script.js"></script>
 </body>
 </html>
+<script >
+  function convertType(){
+    let dropdownValue = $("#party-gold-type").val();
+    console.log(dropdownValue);
+    if (dropdownValue === 'Teezabi') {
+        $('#btn-teezabi').prop('disabled', true);
+        $('#btn-piece').prop('disabled', false);
+        // convertToPiece();
+    } 
+    else if (dropdownValue === 'Piece') {
+        $('#btn-teezabi').prop('disabled', false);
+        $('#btn-piece').prop('disabled', true);
+        // $("#btn-piece-value").hide();
+       
+        // convertToTeezabi();
+    } else {
+        // If no valid type, enable both buttons
+        $('#btn-teezabi').prop('disabled', false);
+        $('#btn-piece').prop('disabled', false);
+    }
+    
+    }
+
+    function convertToTeezabi(){
+      goldrecive = $("#gold-receive").text();
+      console.log(goldrecive);
+    }
+    function convertToPiece(){
+      goldrecive = $("#gold-receive").text();
+      console.log(goldrecive);
+     
+    }
+
+$("#btn-piece").click(function(){
+ let goldrecive = $("#gold-receive").text();
+  let pieceFormual = (goldrecive*70)/100;
+  $('#btn-piece-value').html(pieceFormual).show();
+  console.log(pieceFormual);
+  $('#btn-teezabi-value').hide();
+})
+$("#btn-teezabi").click(function(){
+  let goldrecive = $("#gold-receive").text();
+  let teezabiFormual = (goldrecive*100)/70;
+  $('#btn-teezabi-value').html(teezabiFormual).show();
+  console.log(teezabiFormual);
+  $('#btn-piece-value').hide();
+})
+
+
+// gold add
+
+$("#goldReceive").keyup(function(){
+    let goldRecieve = parseInt($(this).val());
+    let goldReceiveSpan = parseInt($("#gold-receive").text());
+    console.log(goldReceiveSpan);
+    console.log(goldRecieve);
+    let finalVal =goldRecieve+goldReceiveSpan;
+    console.log(finalVal);
+    $("#gold-receive").html(finalVal);
+})
+</script>

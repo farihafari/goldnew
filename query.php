@@ -59,14 +59,30 @@ if (isset($_POST['search'])) {
             'partyName' => $result['party_name'],
             'date' => $result['datetime'],
             'goldType' => $result['recivable_Type'],
-            'goldRecieve' => $result['recivable_gold']
+             'goldRecieve' => $result['recivable_gold'],
+            'totalGold' => $result['recivable_gold'],
+            'payCash' => $result['recivable_cash'],
+            'btnGoldType' => $result['recivable_Type'],
+             'pureGold'=>$result['recivable_gold']*0.9167,
+             'casting'=>$result['recivable_gold'],
+             'ghati'=>$result['recivable_gold']*0.02,
+             'castingReturn'=>$result['recivable_gold']-$result['recivable_gold']*0.02,
+             'ratti'=>$result['recivable_gold']/0.12125
+            
+
+            //  console.log();
+
         ]);
     } else {
         echo json_encode([
             'partyName' => '',
             'date' => '',
             'goldType' => '',
-            'goldRecieve' => ''
+            'goldRecieve' => '',
+            'totalGold' =>'',
+            'btnGoldType' => '',
+                'pureGold' => ''
+
         ]);
     }
 }

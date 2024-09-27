@@ -37,3 +37,5 @@
 <div class="col-lg-8 mt-2">
     <input type="text"  class="form-input" name="partGoldRecieveType">
 </div>
+<span name="totalGold"></span>
+<button value="" name="btnGoldType"></button>
