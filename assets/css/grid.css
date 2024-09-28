@@ -1,3 +1,7 @@
+.grid-icon{
+  color: #fff;
+  font-size: 70px;
+}
 .grid1{
     display: grid;
     grid-template-columns: repeat(1, 1fr);
