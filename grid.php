@@ -27,8 +27,11 @@ include('query.php')
           <i class="fa-solid fa-user font-style" style="color: #FFF;  font-size: 100px;"></i>
           <p class="text-light text-uppercase text-left px-2 pb-2">profile</p>
         </div>
-        <div class="grid1-child grid1-item-2 text-center py-5">
-        <i class="fa-solid fa-chart-column grid-icon"></i>
+        <div class="grid1-child grid1-item-2">
+          <div class="text-center mt-5">
+        <i class="fa-solid fa-chart-column grid-icon mt-3"></i>
+        </div>
+        <p class="text-light text-uppercase text-left px-2 pb-2">gold rate updates</p>
         </div>
 
       </div>
@@ -47,86 +50,156 @@ include('query.php')
         </div>
         <p class="text-light text-uppercase text-left px-2 pb-2">sms</p>
       </div>
-        <div class="grid2-child grid2-item-3">
+        <div class="grid2-child grid2-item-3 ">
+        <div class="text-center pt-3">
         <i class="fa-solid fa-square-poll-vertical grid-icon"></i>
-          
         </div>
-        <div class="grid2-child grid2-item-4 text-center py-4">
-        <i class="fa-solid fa-square-poll-vertical grid-icon"></i></div>
+        <p class="text-light text-capitalize text-left px-2 pb-2">ghati entries</p>
+        </div>
+        <div class="grid2-child grid2-item-4 ">
+      <div class="text-center">
+      <i class="fa-solid fa-square-poll-vertical grid-icon pt-3"></i>
+      </div>
+      <p class="text-light text-capitalize text-left px-2 pb-2">flask entries</p> 
+      </div>
         <div class="grid2-child grid2-item-5">
-        <i class="fa-solid fa-credit-card grid-icon"></i>
+     <div class="text-center pt-3">
+     <i class="fa-solid fa-credit-card grid-icon"></i>
+     </div>
+     <p class="text-light text-capitalize text-left px-2 pb-2">gold purchase and sale</p> 
         </div>
         <div class="grid2-child grid2-item-6">
-        <i class="fa-solid fa-calculator grid-icon"></i>
+       <div class="text-center pt-3">
+       <i class="fa-solid fa-calculator grid-icon"></i>
+       </div>
+       <p class="text-light text-capitalize text-left px-2 pb-2">converter</p> 
         </div>
         <div class="grid2-child grid2-item-7">
-        <i class="fa-solid fa-credit-card grid-icon"></i>
-
+       <div class="text-center pt-3">
+       <i class="fa-solid fa-credit-card grid-icon"></i>
+       </div>
+        <p class="text-light text-capitalize text-left px-2 pb-2">account transiction</p> 
         </div>
       </div>
       <div class="col-lg-3 grid3">
 
         <div class="grid3-child grid3-item-1">
+        <div class="text-center pt-3">
         <i class="fa-solid fa-square-poll-vertical grid-icon"></i>
         </div>
-        <div class="grid3-child grid3-item-2">
-        <i class="fa-solid fa-newspaper grid-icon"></i>
+        <p class="text-light text-capitalize text-left px-2 pb-2">
+         daily ledger
+        </p> 
+        </div>
+        <div class="grid3-child grid3-item-2 pt-3 ">
+       <div class="text-center mt-5">
+       <i class="fa-solid fa-newspaper grid-icon"></i>
+       </div>
+        <p class="text-light text-capitalize text-left px-2 pt-5">privios bill</p> 
         </div>
         <div class="grid3-child grid3-item-3">
-        <i class="fa-solid fa-handshake grid-icon"></i>
+       <div class="text-center pt-3">
+       <i class="fa-solid fa-handshake grid-icon"></i>
+       </div>
+        <p class="text-light text-capitalize text-left px-2 pb-2">parties balance</p> 
         </div>
         <div class="grid3-child grid3-item-4">
         
-        <i class="fa-solid fa-chart-column grid-icon"></i>
+        <div class="text-center pt-3 px-2">
+        <i class="fa-solid fa-chart-column grid-icon" style="font-size: 50px;"></i>
+        </div>
+        <p class="text-light text-capitalize text-left px-2 pb-2">flask</p> 
         </div>
         <div class="grid3-child grid3-item-5">
-        <i class="fa-solid fa-user grid-icon"></i>
+        <div class="text-center  pt-3">
+        <i class="fa-solid fa-user grid-icon" style="font-size: 50px;"></i>
+        </div>
+        <p class="text-light text-capitalize text-left px-2 pb-2">ghati</p> 
         </div>
         <div class="grid3-child grid3-item-6">
+        <div class="text-center pt-3">
         <i class="fa-solid fa-address-book grid-icon"></i>
+        </div>
+        <p class="text-light text-capitalize text-left px-2 pb-2">customer ledger</p> 
         </div>
         <div class="grid3-child grid3-item-7">
+        <div class="text-center pt-3">
         <i class="fa-solid fa-address-book grid-icon"></i>
         </div>
+        <p class="text-light text-capitalize text-left px-2 pb-2">account report</p> 
+        </div>
         <div class="grid3-child grid3-item-8">
-        <i class="fa-solid fa-download grid-icon"></i>
+        <div class="text-center pt-3">
+        <i class="fa-solid fa-download grid-icon" style="font-size: 50px;"></i>
+        </div> 
+           <p class="text-light text-capitalize text-left px-2 pb-2">purchase</p> 
         </div>
         <div class="grid3-child grid3-item-9">
-        <i class="fa-solid fa-user grid-icon"></i>
+       <div class="text-center pt-3 ">
+       <i class="fa-solid fa-user grid-icon" style="font-size: 50px;"></i>
+       </div>
+        <p class="text-light text-capitalize text-left px-2 pb-2">sale</p> 
         </div>
 
       </div>
       <div class="col-lg-3 grid4">
         <div class="grid4-child grid4-item-1">
-        <i class="fa-solid fa-users-gear grid-icon"></i>
+       <div class="text-center pt-3">
+       <i class="fa-solid fa-users-gear grid-icon" style="font-size: 40px;"></i>
+         </div>
+         
+        <p class="text-light text-capitalize text-left  pb-2 px-1">SQL config</p> 
         </div>
         <div class="grid4-child grid4-item-2">
+        <div class="text-center pt-3">
         <i class="fa-solid fa-user-gear grid-icon"></i>
         </div>
+        <p class="text-light text-capitalize text-left px-2 pb-2">maintane updating</p> 
+        </div>
         <div class="grid4-child grid4-item-3">
+        <div class="text-center pt-3">
         <i class="fa-solid fa-gears grid-icon" style="color: #FFF;"></i>
         </div>
+        <p class="text-light text-capitalize text-left px-2 pb-2">maintance calibration</p> 
+        </div>
         <div class="grid4-child grid4-item-4">
-        <i class="fa-solid fa-database grid-icon"></i>  
+        <div class="text-center pt-2">
+          <i class="fa-solid fa-database grid-icon" style="color: #FFF; font-size:50px"></i></div>
+        <p class="text-light text-capitalize text-left pb-1">setup of backup account</p>   
         </div>
         <div class="grid4-child grid4-item-5">
-        <i class="fa-solid fa-database grid-icon"></i>  
+        <div class="text-center pt-2">
+        <i class="fa-solid fa-database grid-icon"></i> 
+        </div>
+        <p class="text-light text-capitalize text-left px-1 pb-3">date backup</p>  
         </div>
         <div class="grid4-child grid4-item-6">
-        <i class="fa-solid fa-download grid-icon"></i>
+<div class="text-center pt-4">
+<i class="fa-solid fa-download grid-icon" style="font-size: 50px;"></i>
+</div>
+        <p class="text-light text-capitalize text-left px-2 pb-2">restore backup</p> 
         </div>
         <div class="grid4-child grid4-item-7">
-        <i class="fa-solid fa-street-view grid-icon"></i>
+<div class="text-center pt-3">
+<i class="fa-solid fa-street-view grid-icon"></i>
+</div>
+        <p class="text-light text-capitalize text-left px-2 pb-2">change password</p>
         </div>
       </div>
     </div>
     <div class="row justify-content-center">
       <div class="col-lg-3 grid5">
         <div class="grid5-child grid5-item-1">
+        <div class="text-center mt-3">
         <i class="fa-solid fa-comment-sms grid-icon " style="color: #FFF;"></i>
         </div>
+        <p class="text-light text-capitalize text-left px-2 pb-2">SMS report</p> 
+        </div>
         <div class="grid5-child grid5-item-2">
+        <div class="text-center mt-3">
         <i class="fa-solid fa-chart-column  grid-icon"></i>
+        </div>
+        <p class="text-light text-capitalize text-left px-2 pb-2">casting reports</p> 
         </div>
      
 
